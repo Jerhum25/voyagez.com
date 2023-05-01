@@ -309,9 +309,13 @@ html {
       .suivezNous {
         width: 20%;
       }
-      .contactFooter p span {
-        font-family: "Cookie";
-        font-size: 30px;
+      .contactFooter p {
+        color: #fff;
+        text-decoration: none;
+        span {
+          font-family: "Cookie";
+          font-size: 30px;
+        }
       }
       .links {
         display: flex;
@@ -406,6 +410,7 @@ html {
       main {
         .infosVoyage {
           padding: 50px 10px;
+          flex-direction: column;
           h2 {
             font-size: 25px;
           }

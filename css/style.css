@@ -303,6 +303,10 @@ html body footer .liensRapides,
 html body footer .suivezNous {
   width: 20%;
 }
+html body footer .contactFooter p {
+  color: #fff;
+  text-decoration: none;
+}
 html body footer .contactFooter p span {
   font-family: "Cookie";
   font-size: 30px;
@@ -384,6 +388,7 @@ html body .copy {
   }
   html body main .infosVoyage {
     padding: 50px 10px;
+    flex-direction: column;
   }
   html body main .infosVoyage h2 {
     font-size: 25px;
