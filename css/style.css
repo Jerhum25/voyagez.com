@@ -388,16 +388,17 @@ html body .copy {
   }
   html body main .infosVoyage {
     padding: 50px 10px;
-    flex-direction: column;
   }
   html body main .infosVoyage h2 {
     font-size: 25px;
   }
   html body main .infosVoyage form {
     width: 100%;
+    flex-direction: column;
   }
-  html body main .infosVoyage button {
+  html body main .infosVoyage form button {
     margin-top: 15px;
+    margin-left: 0;
   }
   html body main .destinations .destination {
     margin: 0 10px;

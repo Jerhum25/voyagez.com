@@ -410,15 +410,16 @@ html {
       main {
         .infosVoyage {
           padding: 50px 10px;
-          flex-direction: column;
           h2 {
             font-size: 25px;
           }
           form {
             width: 100%;
-          }
-          button {
-            margin-top: 15px;
+            flex-direction: column;
+            button {
+              margin-top: 15px;
+              margin-left: 0;
+            }
           }
         }
         .destinations {
