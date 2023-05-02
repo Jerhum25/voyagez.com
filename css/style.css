@@ -53,6 +53,34 @@ html body header nav li a {
   font-size: 18px;
   font-weight: bold;
 }
+html body header .navMobile {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s linear ease-in-out;
+}
+html body header .navMobile li {
+  list-style-type: none;
+}
+html body header .navMobile li:not(:last-child) {
+  margin-bottom: 35px;
+  margin-right: 0;
+}
+html body header .navMobile li a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
 html body header .burgerMenu {
   width: 30px;
   height: 30px;
@@ -83,6 +111,41 @@ html body header .burgerMenu .line::after {
   top: 10px;
   left: 0;
   background: #fff;
+}
+html body header .burgerMenuOpen {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  cursor: pointer;
+  z-index: 15;
+}
+html body header .burgerMenuOpen .line {
+  width: 0%;
+  height: 3px;
+  background: #fff;
+  position: relative;
+}
+html body header .burgerMenuOpen .line::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: -10px;
+  left: 0;
+  background: #fff;
+  transform: rotate(45deg);
+  transform-origin: left;
+}
+html body header .burgerMenuOpen .line::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 10px;
+  left: 0;
+  background: #fff;
+  transform: rotate(-45deg);
+  transform-origin: left;
 }
 html body main .presentation {
   background-image: url("../assets/travel-g467d19446_1920.jpg");
@@ -258,6 +321,7 @@ html body main .contact form {
   width: 55%;
 }
 html body main .contact form div {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -267,6 +331,7 @@ html body main .contact form div:first-child {
 }
 html body main .contact form div input,
 html body main .contact form div textarea {
+  width: 90%;
   background-color: #ddd;
   border-radius: 15px;
   border: none;
@@ -354,37 +419,9 @@ html body .copy {
   }
   html body header nav {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #333;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s linear ease-in-out;
-  }
-  html body header nav li:not(:last-child) {
-    margin-bottom: 35px;
-    margin-right: 0;
   }
   html body header .burgerMenu {
     display: flex;
-    z-index: 11;
-  }
-  html body header .burgerMenu:active + nav {
-    display: flex;
-  }
-  html body header .burgerMenu:active .line {
-    width: 0;
-  }
-  html body header .burgerMenu:active .line::before {
-    transform: rotate(45deg);
-    transform-origin: left;
-  }
-  html body header .burgerMenu:active .line::after {
-    transform: rotate(-45deg);
-    transform-origin: left;
   }
   html body main .infosVoyage {
     padding: 50px 10px;
@@ -418,6 +455,7 @@ html body .copy {
   html body main .aPropos div p {
     width: 100%;
     margin-bottom: 15px;
+    padding: 10px;
   }
   html body main .aPropos div img {
     width: 100%;

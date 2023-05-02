@@ -51,6 +51,35 @@ html {
           }
         }
       }
+      .navMobile {
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #333;
+        flex-direction: column;
+        justify-content: center;
+        transition: 1s linear ease-in-out;
+        li {
+          list-style-type: none;
+          &:not(:last-child) {
+            margin-bottom: 35px;
+            margin-right: 0;
+          }
+          a {
+            color: #fff;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+
       .burgerMenu {
         width: 30px;
         height: 30px;
@@ -79,6 +108,41 @@ html {
             top: 10px;
             left: 0;
             background: #fff;
+          }
+        }
+      }
+      .burgerMenuOpen {
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        cursor: pointer;
+        z-index: 15;
+        .line {
+          width: 0%;
+          height: 3px;
+          background: #fff;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            top: -10px;
+            left: 0;
+            background: #fff;
+            transform: rotate(45deg);
+            transform-origin: left;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            top: 10px;
+            left: 0;
+            background: #fff;
+            transform: rotate(-45deg);
+            transform-origin: left;
           }
         }
       }
@@ -261,6 +325,7 @@ html {
           justify-content: space-between;
           width: 55%;
           div {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -269,6 +334,8 @@ html {
             }
             input,
             textarea {
+              width: 90%;
+
               background-color: #ddd;
               border-radius: 15px;
               border: none;
@@ -369,41 +436,9 @@ html {
         }
         nav {
           display: none;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: #333;
-          flex-direction: column;
-          justify-content: center;
-          transition: 1s linear ease-in-out;
-          li {
-            &:not(:last-child) {
-              margin-bottom: 35px;
-              margin-right: 0;
-            }
-          }
         }
         .burgerMenu {
           display: flex;
-          z-index: 11;
-          &:active {
-            + nav {
-              display: flex;
-            }
-            .line {
-              width: 0;
-              &::before {
-                transform: rotate(45deg);
-                transform-origin: left;
-              }
-              &::after {
-                transform: rotate(-45deg);
-                transform-origin: left;
-              }
-            }
-          }
         }
       }
 
@@ -440,6 +475,7 @@ html {
             p {
               width: 100%;
               margin-bottom: 15px;
+              padding: 10px;
             }
             img {
               width: 100%;
