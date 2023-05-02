@@ -65,7 +65,6 @@ html body header .navMobile {
   background: #333;
   flex-direction: column;
   justify-content: center;
-  transition: 1s linear ease-in-out;
 }
 html body header .navMobile li {
   list-style-type: none;
@@ -93,8 +92,10 @@ html body header .burgerMenu .line {
   height: 3px;
   background: #fff;
   position: relative;
+  transition: 0.2s ease-in-out;
 }
 html body header .burgerMenu .line::before {
+  transition: 0.2s ease-in-out;
   content: "";
   position: absolute;
   width: 30px;
@@ -104,6 +105,7 @@ html body header .burgerMenu .line::before {
   background: #fff;
 }
 html body header .burgerMenu .line::after {
+  transition: 0.2s ease-in-out;
   content: "";
   position: absolute;
   width: 30px;

@@ -63,7 +63,6 @@ html {
         background: #333;
         flex-direction: column;
         justify-content: center;
-        transition: 1s linear ease-in-out;
         li {
           list-style-type: none;
           &:not(:last-child) {
@@ -91,7 +90,9 @@ html {
           height: 3px;
           background: #fff;
           position: relative;
+          transition: .2s ease-in-out;
           &::before {
+            transition: .2s ease-in-out;
             content: "";
             position: absolute;
             width: 30px;
@@ -101,6 +102,7 @@ html {
             background: #fff;
           }
           &::after {
+            transition: .2s ease-in-out;
             content: "";
             position: absolute;
             width: 30px;
