@@ -1,0 +1,68 @@
+.container {
+  padding: 50px;
+  h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    div {
+      margin: 5px 0;
+      label {
+        margin-right: 5px;
+      }
+      select {
+        background: #fff;
+        width: 40px;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      input {
+        border: 1px solid #ccc;
+        outline: none;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+    button {
+      background-color: #c5c1fd;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #333;
+      cursor: pointer;
+      margin-left: 30px;
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    padding: 50px 10px;
+    h2 {
+      font-size: 25px;
+    }
+    form {
+      width: 100%;
+      flex-direction: column;
+      button {
+        margin-top: 15px;
+        margin-left: 0;
+      }
+    }
+  }
+}

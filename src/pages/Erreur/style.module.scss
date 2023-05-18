@@ -1,0 +1,25 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 7vw;        
+    }
+    h3{
+        font-size: 2vw;
+        margin-bottom: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+        width: fit-content;
+        background: transparent;
+        border: none;
+        padding: 5px 10px;
+        background: lightgrey;
+        border-radius: 10px;
+    }
+}
