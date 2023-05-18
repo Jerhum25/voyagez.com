@@ -5,11 +5,9 @@ export function Header() {
   const [toggle, setToggle] = useState(false);
   const toggleMenu = () => {
     setToggle(!toggle);
-    console.log(toggle);
   };
 
   const [largeur, setLargeur] = useState();
-
   useEffect(() => {
     const changeWidth = () => {
       setLargeur(window.innerWidth);
@@ -34,14 +32,14 @@ export function Header() {
         <h1>Voyagez.com</h1>
       </div>
       <div
-        className={toggle || largeur < 475 ? s.burgerMenuOpen : s.burgerMenu}
+        className={toggle ? s.burgerMenuOpen : s.burgerMenu}
         onClick={toggleMenu}
       >
         <div className={s.line}></div>
       </div>
       <nav
-        className={toggle || largeur < 475 ? s.navMobile : s.navig}
-        onClick={toggle || largeur < 475 ? toggleMenu : undefined}
+        className={toggle  ? s.navMobile : s.navig}
+        onClick={largeur < 475 || toggle ? toggleMenu : undefined}
       >
         <li>
           <a href="/#">accueil</a>
