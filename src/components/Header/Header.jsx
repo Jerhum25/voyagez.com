@@ -1,6 +1,6 @@
 import s from "./style.module.scss";
 import { useState, useEffect } from "react";
-
+import { HashLink as Link } from "react-router-hash-link";
 export function Header() {
   const [toggle, setToggle] = useState(false);
   const toggleMenu = () => {
@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <div className={s.container}>
-      <div className={s.logo}>
+      <div className={s.logo} id="logo">
         <a href="/">
           <img src="/assets/3d-model-gd9605aad7_640.jpg" alt="logo" />
         </a>
@@ -42,16 +42,16 @@ export function Header() {
         onClick={largeur < 475 || toggle ? toggleMenu : undefined}
       >
         <li>
-          <a href="/#">accueil</a>
+          <Link to="/#">accueil</Link>
         </li>
         <li>
-          <a href="/#destinations">nos destinations</a>
+          <Link to="/#destinations">nos destinations</Link>
         </li>
         <li>
-          <a href="/#aPropos">à propos de nous</a>
+          <Link to="/#aPropos">à propos de nous</Link>
         </li>
         <li>
-          <a href="/#contact">nous contacter</a>
+          <Link to="/#contact">nous contacter</Link>
         </li>
       </nav>
     </div>

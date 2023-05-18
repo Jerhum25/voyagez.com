@@ -1,3 +1,4 @@
+import { HashLink as Link } from "react-router-hash-link";
 import s from "./style.module.scss";
 
 export function Footer() {
@@ -21,16 +22,16 @@ export function Footer() {
           <h3>Liens rapides</h3>
           <ul>
             <li>
-              <a href="/">Accueil</a>
+              <Link to="/#">accueil</Link>
             </li>
             <li>
-              <a href="/#destinations">Destinations</a>
+              <Link to="/#destinations">nos destinations</Link>
             </li>
             <li>
-              <a href="/#aPropos">A propos</a>
+              <Link to="/#aPropos">à propos de nous</Link>
             </li>
             <li>
-              <a href="/#contact">Contact</a>
+              <Link to="/#contact">nous contacter</Link>
             </li>
           </ul>
         </div>

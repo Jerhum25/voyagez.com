@@ -16,7 +16,7 @@ root.render(
         <Route path="/accueil" element={<Accueil />} />
         <Route path="/details/:id" element={<Details />} />
       </Route>
-        <Route path="*" element={<Erreur />} />
+      <Route path="*" element={<Erreur />} />
     </Routes>
   </BrowserRouter>
 );
