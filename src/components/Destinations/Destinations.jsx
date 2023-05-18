@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Destinations() {
   return (
-    <div className={s.container}>
+    <div className={s.container} id="destinations">
       {destinationsList.map(({ index, nom, src, alt, id }) => (
         <Link to={`/details/${id}`} className={s.destination} key={index + nom}>
           <img src={src} alt={alt} />

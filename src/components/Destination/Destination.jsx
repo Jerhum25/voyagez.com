@@ -1,5 +1,6 @@
 import s from "./style.module.scss";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { destinationsList } from "../../data/destinationsList";
 
 export function Destination() {
@@ -11,7 +12,7 @@ export function Destination() {
 
   return singleDestination ? (
     <div className={s.destination}>
-      <Link to={"/"}>
+      <Link to={"/#destinations"}>
         <i className="fa-solid fa-chevron-left"></i>Retour aux destinations
       </Link>
       <img src={singleDestination.src} alt={singleDestination.alt} />
